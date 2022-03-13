@@ -19,3 +19,13 @@ class Project(models.Model):
     live_link = models.CharField(max_length=200, blank=True)
     owner = models.ForeignKey(Profile, on_delete=models.CASCADE, related_name='projects')
 
+class Review(models.Model):
+    review = models.TextField(max_length=1000)
+    visuals_rating = models.PositiveBigIntegerField(default=10)
+    functionality_rating = models.PositiveBigIntegerField(default=10)
+    content_rating = models.PositiveBigIntegerField(default=10)
+    usability_rating = models.PositiveBigIntegerField(default=10)
+    review_date = models.DateField(auto_now_add=True)
+    reviewer = models.ForeignKey(Profile, on_delete=models.CASCADE, related_name='reviews', null=True)
+    Project = models.ForeignKey(Project, on_delete=models.CASCADE, related_name='reviews', null=True)
+
