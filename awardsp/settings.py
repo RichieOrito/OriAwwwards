@@ -81,6 +81,7 @@ DATABASES = {
         'NAME': 'awards',
         'USER':'postgres',
         'PASSWORD':'xoxo',
+        'HOST': 'localhost',
     }
 }
 
