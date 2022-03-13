@@ -1,0 +1,11 @@
+<header>
+    <a href="{% url 'index'%}" class="logo">OriAwwwards</a>
+    <ul class="navbar">
+        {% if user.is_authenticated %}
+      <li><a href="{% url 'profile' %}">{{user.username}}</a></li>
+      <li><a href="{% url 'logout'%}">Logout</a></li>
+      {% else %}
+      <li><a href="{% url 'login'%}">Sign In</a></li>
+      {% endif %}
+    </ul>
+  </header>
