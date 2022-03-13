@@ -1,0 +1,35 @@
+{% extends 'auth/base.html' %}
+{% load bootstrap5 %}
+{% load static %}
+
+{% block content %}
+{% if form.errors %}
+<div class="alert-danger py-1 mb-1 rounded">
+    <p class="text-danger m-3">Passwords did not match.</p>
+</div>
+{% endif %}
+<main class="main">
+    <a class="button-twitter" href="https://twitter.com/" target="_blank"></a>
+    <form class="login" action="" method="POST">
+        {% csrf_token %}
+      <svg class="login-sides">
+        <line class="top-right first" x1="50%" x2="100%" y1="0" y2="0"/>
+        <line class="top-left first" x1="50%" x2="0" y1="0" y2="0"/>
+        <line class="right second" x1="100%" x2="100%" y1="0" y2="100%"/>
+        <line class="left second" x1="0" x2="0" y1="0" y2="100%"/> 
+        <line class="bottom-left third" x1="0" x2="50%" y1="100%" y2="100%"/>
+        <line class="bottom-right third" x1="100%" x2="50%" y1="100%" y2="100%"/>
+      </svg>
+      <fieldset class="login-fieldset">
+        <input type="text" placeholder="Username" name="username" class="login-fieldset-field" required>
+        <input type="password" name="password" placeholder="******" class="login-fieldset-field" required>
+        <button type="submit" class="login-fieldset-submit">
+          Login
+        </button>
+      </fieldset>
+      <hr>
+      <p class="my-4">Don't have an account? <a href="{% url 'register'%}">Sign Up</a></p>
+    </form>
+  </main>
+
+  {% endblock %}
