@@ -395,6 +395,10 @@ hr {
   text-transform: uppercase;
 }
 
+#newReviewModal{
+    color: var(--main1-color);
+}
+
 
 
 
