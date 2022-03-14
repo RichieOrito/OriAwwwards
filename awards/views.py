@@ -24,8 +24,6 @@ def index(request):
     else:
         upload_form = NewProjectForm()
 
-
-
     context = {'upload_form': upload_form, 'projects':projects}
     return render(request, 'index.html', context)
 
@@ -64,12 +62,13 @@ def login_user(request):
     context = {}
     return render(request, 'auth/login.html', context)
 
-def log_out(request):
+def logout_user(request):
     logout(request)
     return redirect('login')
 
 @login_required(login_url='login')
 def profile(request):
+
     my_projects = Project.objects.all().filter(owner=request.user.profile)
 
     if request.method == 'POST':
@@ -79,7 +78,7 @@ def profile(request):
     else:
         update_form = UpdateProfileForm()
 
-    context = {'update_form':update_form, 'my_projects':my_projects}
+    context = {'update_form':update_form, 'my_projects':my_projects} 
     return render(request, 'profile.html', context)
 
 def project(request, project_id):
@@ -99,6 +98,7 @@ def project(request, project_id):
 
 
     context = {'project': project, 'reviews':reviews, 'review_form':review_form}
+
     return render(request, 'project.html', context)
 
 class ProfileList(APIView):
