@@ -1,0 +1,1 @@
+web: gunicorn awardsp.wsgi --log-file -
