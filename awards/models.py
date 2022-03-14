@@ -2,6 +2,8 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.dispatch import receiver
 from django.db.models.signals import post_save
+from django.core.validators import MaxValueValidator
+from django.forms.models import modelform_factory
 
 # Create your models here.
 
@@ -99,10 +101,11 @@ class Review(models.Model):
     content_rating = models.PositiveBigIntegerField(default=10)
     usability_rating = models.PositiveBigIntegerField(default=10)
     review_date = models.DateField(auto_now_add=True)
+
     reviewer = models.ForeignKey(Profile, on_delete=models.CASCADE, related_name='reviews', null=True)
-    Project = models.ForeignKey(Project, on_delete=models.CASCADE, related_name='reviews', null=True)
+    project = models.ForeignKey(Project, on_delete=models.CASCADE, related_name='reviews', null=True)
 
     @property
     def average_rating(self):
-        return round((self.get_average_visuals_rating + self.get_average_functionality_rating + self.get_average_content_rating + self.get_average_usability_rating)/4,1)
+        return round((self.visuals_rating + self.functionality_rating + self.content_rating + self.usability_rating)/4,1)
 
