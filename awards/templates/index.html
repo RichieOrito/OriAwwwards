@@ -70,7 +70,7 @@
                 </div>
                 <div class="posted_by d-flex my-2">
                     <div class="profilepic">
-                        {% if project.owner.profile_pic.url%}
+                        {% if project.owner.profile_pic %}
                         <img src="{{project.owner.profile_pic.url}}" alt="">
                         {%else%}
                         <img src="{%static 'img/default.png'%}" alt="">
