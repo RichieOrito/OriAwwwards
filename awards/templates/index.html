@@ -29,6 +29,7 @@
 <div class="container my-5 p-5 content_wrapper">
     <div class="searchform my-2">
         <form action="{% url 'index'%}" method="POST" class="d-flex">
+            {% csrf_token %}
             <input class="form-control" type="text" name="search" id="search" placeholder="Search for a project...">
             <button class="btn btn-primary" type="submit"><i class='bx bx-search'></i></button>
         </form>
