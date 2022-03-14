@@ -72,9 +72,9 @@
                     <div class="profilepic">
                         {% if project.owner.profile_pic %}
                         <img src="{{project.owner.profile_pic.url}}" alt="">
-                        {%else%}
+                        {% else %}
                         <img src="{%static 'img/default.png'%}" alt="">
-                        {%endif%}
+                        {% endif %}
                     </div>
                     <div class="username mx-3">
                         <div class="fullname">{{project.owner.user.first_name | title}} {{project.owner.user.last_name | title}}</div>
