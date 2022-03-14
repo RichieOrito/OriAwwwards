@@ -12,6 +12,19 @@
   
 }
 
+:root {
+    --bg-color: #FDFFA9;
+    --main1-color: #019267;
+    --main2-color: #00C897;
+    --main3-color: #FFD365;
+    --main4-color: #fff;
+}
+
+body{
+    color: var(--main4-color);
+    background-color: var(--bg-color);
+}
+
 header{
     position: fixed;
     width: 100%;
@@ -21,13 +34,20 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 80px;
+    padding: 5px 90px;
+    background-color: var(--main3-color);
 }
 
 .logo{
     font-size: 1.5rem;
     font-weight: 500;
-    /* color:; */
+    color: var(--main1-color);
+}
+
+a:hover { text-decoration: none; }
+
+.logo:hover{
+    color: var(--main4-color);
 }
 
 .navbar {
@@ -38,10 +58,334 @@ header{
     font-size: 1rem;
     padding:10px 20px;
     font-weight: 500;
-    /* color: ; */
-    color:#ffffff
+    color:var(--main4-color);
 }
 
-/* .navbar a:hover {
-    color: ;
-} */
+a:link { text-decoration: none; }
+
+
+a:visited { text-decoration: none; }
+
+
+a:hover { text-decoration: none; }
+
+
+a:active { text-decoration: none; }
+
+.navbar a:hover {
+    color: var(--main1-color) ;
+}
+
+.auth-form-wrapper {
+    background-color: var(--bg-color);
+}
+
+.auth-form-wrapper .form {
+    width: 100%;
+}
+
+.input_field {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.auth-form-wrapper .form .input_field .input {
+    width: 100%;
+    padding: 0.5rem;
+    outline: none;
+    border: .5px solid var(--main1-color);
+    background-color: var(--bg-color);
+}
+
+.input::placeholder {
+    font-weight: 300;
+}
+
+.auth-form-wrapper .form .btn {
+    background-color: var(--main1-color);
+    border: 1px solid var(--main1-color);
+    text-transform: uppercase;
+    border-radius: 0;
+}
+
+.auth-form-wrapper .logo {
+    display: flex;
+    justify-content: center;
+}
+
+.content_wrapper .searchform form .btn {
+    background-color: var(--main1-color);
+    border: none;
+    outline: 2px solid var(--main1-color);
+    margin-bottom: 10px;
+    border-radius: 0;
+}
+
+.content_wrapper .searchform form input {
+    outline: none;
+    border: none;
+    outline: 2px solid var(--main1-color);
+    margin-bottom: 10px;
+    border-radius: 0;
+    width: 100%;
+}
+
+.bx-search{
+    font-weight: 900;
+    font-size: medium;
+    text-align: center;
+}
+
+.projects{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.desc{
+    color: grey;
+}
+
+small em{
+    color: var(--main1-color);
+}
+
+.top_of_week h4{
+    color: var(--main1-color);
+}
+
+.single_project {
+    min-height: 200px;
+    width: 30%;
+    min-width: 200px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.single_project .thumbnail {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.single_project .thumbnail img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.single_project .thumbnail .project_name {
+    background-color: var(--main2-color);
+    width: 100%;
+    bottom: 0;
+    height: 50px;
+    padding-left: .5rem;
+    padding-top: .5rem;
+    transition: 300ms;
+}
+
+.single_project .thumbnail .project_name * {
+    display: none;
+  }
+  
+.single_project .thumbnail .project_name .name {
+    display: block;
+    color: white;
+    font-weight: 600;
+    line-height: 1;
+    text-decoration: none;
+}
+
+.single_project .thumbnail:hover .project_name {
+    background: linear-gradient(0deg, var(--main2-color), var(--main2-color), transparent);
+    width: 100%;
+    bottom: 0;
+    height: 100%;
+    padding-left: .5rem;
+    padding-top: .5rem;
+}
+
+.single_project .thumbnail:hover .project_name * {
+    display: block;
+}
+
+.single_project .thumbnail:hover .project_name .rating,
+.single_project .thumbnail:hover .project_name .name {
+  color: var(--main4-color);
+  font-weight: 600;
+  line-height: 1;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.username p em{
+    color: var(--main2-color);
+}
+
+.single_project .thumbnail:hover .project_name .rating {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-top: 15%;
+}
+
+.single_project .thumbnail:hover .project_name .stars {
+    display: flex;
+    color: white;
+}
+
+.single_project .thumbnail:hover .project_name .description {
+    color: var(--main3-color);
+}
+
+.single_project .posted_by .profilepic {
+    height: 45px;
+    width: 45px;
+    overflow: hidden;
+}
+
+.single_project .posted_by .profilepic img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.single_project .posted_by .username .fullname {
+    font-weight: 600;
+    color: var(--main1-color);
+}
+
+.profile h3, .profile h4 {
+    color: var(--main2-color);
+}
+
+.profile .profile_pic {
+    position: relative;
+    width: 30%;
+    overflow: hidden;
+}
+
+.profile .profile_pic img {
+    height: 90%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.bio{
+    color: var(--main1-color);
+}
+
+.profile li {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.profile .btn {
+    color: var(--main1-color);
+    border: 1px solid var(--main1-color);
+}
+
+.profile .btn:hover {
+    border: 1px solid var(--main1-color);
+    background-color: var(--main1-color);
+    color: white;
+}
+
+.profile .details {
+    flex-grow: 1;
+    margin-left: 1rem;
+    color: var(--main1-color);
+}
+
+.profile .details .project-overall-rating {
+    font-size: 3rem;
+    color: var(--main2-color);
+    font-weight: 900;
+}
+
+.profile .details .category-rating .ratingbar {
+    margin-top: 0;
+    height: 5px;
+    width: 70%;
+    background-color: var(--main3-color);
+}
+
+
+.profile .details .category-rating .ratingbar .bar {
+    background-color: var(--main3-color);
+    height: 100%;
+}
+
+.profile .details .category-rating > p {
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.stars {
+    color: var(--main2-color);
+}
+
+hr {
+    color: var(--main1-color);
+}
+
+.live-button, .repo-button {
+    background-color: var(--main1-color);
+    color: white !important;
+    border-radius: 0;
+}
+
+.content_wrapper > button {
+    border: 1px solid var(--main1-color);
+    color: var(--main1-color);
+}
+
+.content_wrapper > button:hover {
+    background-color: var(--main1-color);
+    color: white;
+    border: 1px solid var(--main1-color);
+}
+
+.live_link, .github_link {
+    color: var(--main3-color);
+    transition: 300ms;
+}
+
+.live_link a, .github_link a {
+    font-size: 2rem;
+}
+
+.live_link:hover, .github_link:hover {
+    color: var(--main1-color);
+}
+
+#newProjectModal .modal-dialog .modal-content .modal-header .modal-title,
+#updateProfileForm .modal-dialog .modal-content .modal-header .modal-title,
+#newProjectForm .modal-dialog .modal-content .modal-header .modal-title {
+  color: var(--main1-color);
+}
+
+#newProjectModal .modal-dialog .modal-content .modal-body input, #newProjectModal .modal-dialog .modal-content .modal-body textarea,
+#updateProfileForm .modal-dialog .modal-content .modal-body input,
+#updateProfileForm .modal-dialog .modal-content .modal-body textarea,
+#newProjectForm .modal-dialog .modal-content .modal-body input,
+#newProjectForm .modal-dialog .modal-content .modal-body textarea {
+  border-radius: 0;
+  border: 1px solid var(--main1-color);
+  outline: none;
+}
+
+#newProjectModal .modal-dialog .modal-content .modal-body .btn,
+#updateProfileForm .modal-dialog .modal-content .modal-body .btn,
+#newProjectForm .modal-dialog .modal-content .modal-body .btn {
+  background-color: var(--main1-color);
+  border-radius: 0;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+}
+
+
+
+
+
