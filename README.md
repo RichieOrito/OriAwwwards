@@ -165,6 +165,6 @@ Github - [RICHIE ORITO](https://github.com/RichieOrito)
 
 ## Live Link
 
-LiveLink- [Gh-pages](https://origram.herokuapp.com/)
+LiveLink- [Gh-pages](https://oriawwwards.herokuapp.com/)
 
 [Go Back to the top](#OriAwwwards)
