@@ -346,13 +346,19 @@ hr {
     border: 1px solid var(--main1-color);
 }
 
-.live_link, .github_link {
-    color: var(--main3-color);
+.live_link{
+    color: var(--main1-color);
+    transition: 300ms;
+}
+
+.github_link{
+    color: var(--main1-color);
     transition: 300ms;
 }
 
 .live_link a, .github_link a {
     font-size: 2rem;
+    color: var(--main1-color);
 }
 
 .live_link:hover, .github_link:hover {
