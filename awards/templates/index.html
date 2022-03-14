@@ -71,9 +71,7 @@
                 </div>
                 <div class="posted_by d-flex my-2">
                     <div class="profilepic">
-                        {% if project.owner.profile_pic.url %}
-                        <img src="{{project.owner.profile_pic.url}}" alt="">
-                        {% endif %}
+                        <img src="{{project.owner.profile_pic.url | default_if_none:'#'}}" alt="">
                     </div>
                     <div class="username mx-3">
                         <div class="fullname">{{project.owner.user.first_name | title}} {{project.owner.user.last_name | title}}</div>

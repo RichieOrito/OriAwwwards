@@ -19,6 +19,13 @@ class Profile(models.Model):
         if created:
             Profile.objects.create(user=instance)
 
+    @property
+    def get_profile_pic(self):
+        if self.profile_pic and hasattr(self.profile_pic, 'url'):
+            return self.profile_pic
+        else:
+            return "/static/images/alexander-andrews-yOIT88xWkbg-unsplash_1CeMvML.jpg"
+
     def __str__(self):
         return self.user.username
 
