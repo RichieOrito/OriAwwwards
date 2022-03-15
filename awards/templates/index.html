@@ -66,7 +66,7 @@
                         <a class="name" href="{% url 'project' project_id=project.id%}">{{ project.name}}</a>
                         <p class="description">{{project.description | truncatechars:60}}</p>
                     </div>
-                    <img src="{{project.screenshot.url}}" alt="">        
+                    <a class="name" href="{% url 'project' project_id=project.id%}"><img src="{{project.screenshot.url}}" alt=""></a>     
                 </div>
                 <div class="posted_by d-flex my-2">
                     <div class="profilepic">
