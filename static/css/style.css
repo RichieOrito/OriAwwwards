@@ -224,8 +224,8 @@ small em{
 }
 
 .name:hover{
-    color: var(--bg-color);
-    transform: scale(1.2);
+    color: black;
+    transform: scale(1);
 }
 
 .username p em{
