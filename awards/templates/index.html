@@ -50,18 +50,22 @@
             <div class="single_project my-3">
                 <div class="thumbnail position-relative">
                     <div class="project_name position-absolute">
+                        <a class="name" href="{% url 'project' project_id=project.id%}">
                         <p class="rating">{{project.get_overall_average_rating}}</p>
+                        </a>
                         <div class="stars">
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star-half'></i>
-                            <i class='bx bx-star'></i>
-                            <i class='bx bx-star'></i>
-                            <i class='bx bx-star'></i>
+                            <a class="name" href="{% url 'project' project_id=project.id%}">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star-half'></i>
+                                <i class='bx bx-star'></i>
+                                <i class='bx bx-star'></i>
+                                <i class='bx bx-star'></i>
+                            </a>
                         </div>
                         <a class="name" href="{% url 'project' project_id=project.id%}">{{ project.name}}</a>
                         <p class="description">{{project.description | truncatechars:60}}</p>

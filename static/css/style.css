@@ -214,7 +214,7 @@ small em{
 
 .single_project .thumbnail:hover .project_name .rating,
 .single_project .thumbnail:hover .project_name .name {
-  color: var(--main4-color);
+  color: var(--main3-color);
   font-weight: 600;
   line-height: 1;
   font-size: 1.5rem;
@@ -234,7 +234,7 @@ small em{
 
 .single_project .thumbnail:hover .project_name .stars {
     display: flex;
-    color: white;
+    color: var(--main3-color);
 }
 
 .single_project .thumbnail:hover .project_name .description {
@@ -351,12 +351,12 @@ hr {
 }
 
 .live_link{
-    color: var(--main1-color);
+    color: var(--main2-color);
     transition: 300ms;
 }
 
 .github_link{
-    color: var(--main1-color);
+    color: var(--main2-color);
     transition: 300ms;
 }
 
@@ -366,7 +366,7 @@ hr {
 }
 
 .live_link:hover, .github_link:hover {
-    color: var(--main2-color);
+    color: var(--main4-color);
 }
 
 #newProjectModal .modal-dialog .modal-content .modal-header .modal-title,
