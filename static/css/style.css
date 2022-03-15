@@ -221,8 +221,8 @@ small em{
     margin-top: 1rem;
   }
 
-.single_project .thumbnail:hover .project_name .name {
-  color: var(--main1-color);
+.single_project .thumbnail:hover .project_name .name:hover {
+  color: var(--main3-color);
   font-weight: 600;
   line-height: 1;
   font-size: 1.5rem;
