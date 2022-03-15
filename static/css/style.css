@@ -213,7 +213,14 @@ small em{
     display: block;
 }
 
-.single_project .thumbnail:hover .project_name .rating,
+.single_project .thumbnail:hover .project_name .rating {
+    color: var(--main4-color);
+    font-weight: 600;
+    line-height: 1;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+
 .single_project .thumbnail:hover .project_name .name {
   color: var(--main4-color);
   font-weight: 600;
@@ -224,7 +231,6 @@ small em{
 }
 
 .name:hover{
-    color: black;
     transform: scale(1);
 }
 
