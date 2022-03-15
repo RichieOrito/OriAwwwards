@@ -193,7 +193,7 @@ small em{
   
 .single_project .thumbnail .project_name .name {
     display: block;
-    color: white;
+    color: var(--main4-color);
     font-weight: 600;
     line-height: 1;
     text-decoration: none;
@@ -222,7 +222,7 @@ small em{
   }
 
 .single_project .thumbnail:hover .project_name .name {
-  color: var(--main4-color);
+  color: var(--main1-color);
   font-weight: 600;
   line-height: 1;
   font-size: 1.5rem;
