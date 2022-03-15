@@ -197,6 +197,7 @@ small em{
     font-weight: 600;
     line-height: 1;
     text-decoration: none;
+    transition: 500ms;
 }
 
 .single_project .thumbnail:hover .project_name {
@@ -220,6 +221,11 @@ small em{
   font-size: 1.5rem;
   margin-top: 1rem;
   cursor: pointer;
+}
+
+.name:hover{
+    color: var(--bg-color);
+    transform: scale(1.2);
 }
 
 .username p em{
