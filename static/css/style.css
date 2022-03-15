@@ -369,14 +369,6 @@ hr {
     color: var(--main2-color);
 }
 
-.bxl-github{
-    color: var(--main1-color);
-}
-
-.bx-link-external{
-    color: var(--main1-color);
-}
-
 #newProjectModal .modal-dialog .modal-content .modal-header .modal-title,
 #updateProfileForm .modal-dialog .modal-content .modal-header .modal-title,
 #newProjectForm .modal-dialog .modal-content .modal-header .modal-title {
