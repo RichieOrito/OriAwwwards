@@ -366,6 +366,14 @@ hr {
 }
 
 .live_link:hover, .github_link:hover {
+    color: var(--main2-color);
+}
+
+.bxl-github{
+    color: var(--main1-color);
+}
+
+.bx-link-external{
     color: var(--main1-color);
 }
 
